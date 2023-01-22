@@ -44,6 +44,62 @@
             padding: 10px;
             border: solid 1px green
         }  
+     
+     .hallucination-effect {
+  $url : url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Point_Reyes_Lighthouse_%28April_2012%29.jpg/593px-Point_Reyes_Lighthouse_%28April_2012%29.jpg);
+  $offset : 5px;
+
+  background-image: $url;
+  background-size: cover;
+  background-position: center;
+
+  @supports (mix-blend-mode: multiply) {
+    position: relative;
+    overflow: hidden;
+    background-color: magenta;
+    background-blend-mode: screen;
+
+    &:before, &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: inherit;
+      mix-blend-mode: multiply;
+      transform: scale(1.05);
+    }
+
+    &:before {
+      background-color: yellow;
+      background-blend-mode: screen;
+      transform-origin: top left;
+    }
+
+    &:after {
+      background-color: cyan;
+      background-blend-mode: screen;
+      transform-origin: bottom right;
+    }
+  }
+}
+
+[class$=-effect] img {
+  vertical-align: top !important;
+  margin: 0 !important;
+  opacity: 0 !important;
+}
+
+/* CodePen Styles */
+body {
+  display: flex;
+  height: 100vh;
+}
+div {
+  margin: auto;
+}
         
     </style>
 </head>
@@ -58,8 +114,12 @@
     
     <h1 style="color:black;">Kris's Portfolio</h1>
     
-    <img src="./2022-05-14-054039.jpg" />
-    
+<!--     <img src="./2022-05-14-054039.jpg" />
+     -->
+    <div class="hallucination-effect">
+  <img src="./2022-05-14-054039.jpg">
+</div>
+ 
     <h1 style="color:black;"> Video Movie</h1>
     
     <video width="500px" height="500px"
