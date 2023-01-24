@@ -5,7 +5,7 @@
 
 ## My Eye Exercise Repo
 
-<a href="https://github.com/MasterOracleSentinel/Week_08--Styles-and-Bootstrap/tree/main/EyeMovementExercise">Eye Exercise</a>
+<a href="https:///masteroraclesentinel.github.io/Week_08--Styles-and-Bootstrap/tree/main/EyeMovementExercise">Eye Exercise</a>
 
 ## My Real-Time Bus Tracking Exercise
 
